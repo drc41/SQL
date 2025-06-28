@@ -50,10 +50,3 @@ FROM events e
 LEFT JOIN vips v ON e.event_id = v.event
 GROUP BY e.event_name
 ORDER BY attendee_count DESC;
-
-List all the products sold in Los Angeles in February, and include how many of each were sold
-
-SELECT Product, SUM(quantity)
-FROM BIT_DB.FebSales
-WHERE location like '%Los Angeles%'
-GROUP BY Product
